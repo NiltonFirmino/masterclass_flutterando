@@ -1,10 +1,59 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../app/home_page.dart';
+import '../../app/repositories/repositories_page.dart';
 import '../theme/text_theme.dart';
 
-BottomAppBar myBottomBar() {
-  return BottomAppBar(
+class MyBottomBar extends StatefulWidget {
+  const MyBottomBar({Key? key}) : super(key: key);
+
+  @override
+  _MyBottomBarState createState() => _MyBottomBarState();
+}
+
+class _MyBottomBarState extends State<MyBottomBar> {
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    HomePage(),
+    RepositoriesPage(),
+    Text(
+      'Index 2: School',
+      style: optionStyle,
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.business),
+          label: 'Business',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.school),
+          label: 'School',
+        ),
+      ],
+      currentIndex: _selectedIndex,
+      selectedItemColor: Colors.amber[800],
+      onTap: _onItemTapped,
+    );
+
+    /* BottomAppBar(
     child: Container(
       height: 124,
       width: double.infinity,
@@ -64,7 +113,10 @@ BottomAppBar myBottomBar() {
                           ),
                         ),
                         tooltip: "Repositorie",
-                        onPressed: () {},
+                        onPressed: () {
+                        
+                          
+                        },
                       ),
                       Text(
                         "Repositórios",
@@ -107,5 +159,7 @@ BottomAppBar myBottomBar() {
         ),
       ),
     ),
-  );
+    
+  );*/
+  }
 }
