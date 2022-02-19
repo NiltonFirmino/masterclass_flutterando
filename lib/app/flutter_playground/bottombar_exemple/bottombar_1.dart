@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+class MyBottomBarExemple extends StatefulWidget {
+  const MyBottomBarExemple({Key? key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<MyBottomBarExemple> createState() => _MyBottomBarExempleState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _MyBottomBarExempleState extends State<MyBottomBarExemple> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
