@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
-class MainMoneyScreenPage extends StatelessWidget {
-  const MainMoneyScreenPage({Key? key}) : super(key: key);
+class MockupMyMoneyPage extends StatelessWidget {
+  const MockupMyMoneyPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Container(); 
+    
+    //TODO: Refazer a bagaça toda e bem feita
+    
+    /*MaterialApp(
       home: const MoneyScreenPage(),
       debugShowCheckedModeBanner: true,
       theme: ThemeData(
@@ -137,6 +141,6 @@ class MoneyScreenPage extends StatelessWidget {
           )
         ],
       ),
-    );
+    );*/
   }
 }

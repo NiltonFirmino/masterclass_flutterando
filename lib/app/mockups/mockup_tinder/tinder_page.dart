@@ -6,7 +6,10 @@ class MockupTinderPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Container(); 
+    //TODO: Refazer a bagaça toda e bem feita
+    
+    /* MaterialApp(
       home: const TinderPage(),
       theme: ThemeData(
         textTheme: const TextTheme(
@@ -185,6 +188,6 @@ class TButton extends StatelessWidget {
         ),
       ),
       onTap: () {},
-    );
+    );*/
   }
 }

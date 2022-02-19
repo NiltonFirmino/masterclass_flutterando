@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/splash': (context) => const SplashPage(),
         '/': (context) => const AppPage(),
-        '/mockup0': (context) => const TinderPage(),
-        '/mockup1': (context) => const MoneyScreenPage(),
+        '/mockup0': (context) => const MockupTinderPage(),
+        '/mockup1': (context) => const MockupMyMoneyPage(),
         '/animation1': (context) => const ImplicitExpasionLilePage(),
         '/animation0': (context) => const ImplicitAnimationButtonPage(),
         '/animation3': (context) => const ExplicitExpasionLilePage(),

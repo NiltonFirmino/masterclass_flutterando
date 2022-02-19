@@ -5,9 +5,9 @@ import '../theme/text_theme.dart';
 
 AppBar myAppBarHome(
     {required String title,
-    String subtitle = 'Flutterando Masterclass',
-    bool isLeading = false,
-    String theme = 'awesomemoon'}) {
+    final String subtitle = 'Flutterando Masterclass',
+    final bool isLeading = false,
+    final String theme = 'awesomemoon'}) {
   return AppBar(
     elevation: 0,
     title: SizedBox(
