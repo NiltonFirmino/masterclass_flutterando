@@ -26,20 +26,14 @@ class _AppPageState extends State<AppPage> {
     myAppBarHome(
       isLeading: true,
       title: 'Atividades',
-      subtitle: 'Flutterando Masterclass',
-      theme: 'awesomemoon',
     ),
     myAppBarHome(
       isLeading: true,
       title: 'Repositórios',
-      subtitle: 'Flutterando Masterclass',
-      theme: 'awesomemoon',
     ),
     myAppBarHome(
       isLeading: true,
       title: 'Sobre o dev',
-      subtitle: 'Flutterando Masterclass',
-      theme: 'awesomemoon',
     ),
   ];
 
@@ -48,9 +42,11 @@ class _AppPageState extends State<AppPage> {
     Text(
       '',
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
+    Center(
+      child: Text(
+        'Sobre o dev',
+        style: optionStyle,
+      ),
     ),
   ];
 
@@ -66,9 +62,7 @@ class _AppPageState extends State<AppPage> {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: _widgetAppbarOptions.elementAt(_selectedAppbar),
-        body: Center(
-          child: _widgetBodyOptions.elementAt(_selectedBody),
-        ),
+        body:  _widgetBodyOptions.elementAt(_selectedBody),
         bottomNavigationBar: BottomAppBar(
           child: Container(
             height: 124,
@@ -180,43 +174,7 @@ class _AppPageState extends State<AppPage> {
           ),
         )
 
-        /* BottomNavigationBar(
-        backgroundColor: Color(0xFF121517),
-        items: [
-          BottomNavigationBarItem(
-            icon: SizedBox(
-              width: 20,
-              height: 20,
-              child: Center(
-                child: SvgPicture.asset('assets/icon/feathertarget.svg'),
-              ),
-            ),
-            label: 'Atividades',
-          ),
-          BottomNavigationBarItem(
-            icon: SizedBox(
-              width: 20,
-              height: 20,
-              child: Center(
-                child: SvgPicture.asset('assets/icon/awesomegithub.svg'),
-              ),
-            ),
-            label: 'Repositórios',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: Color(0xffEDF4F8),
-              size: 24,
-            ),
-            label: 'Sobre o dev',
-          ),
-        ],
-        currentIndex: _selectedBody,
-        unselectedItemColor: const Color(0xffEDF4F8),
-        selectedItemColor: const Color(0xffEDF4F8),
-        onTap: _onItemTapped,
-      ),*/
+       
 
         );
   }

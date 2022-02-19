@@ -64,8 +64,9 @@ class _ExplicitExpasionLilePageState extends State<ExplicitExpasionLilePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('MyScrollView'),
+        title: const Text('MyScrollView - Controlada'),
       ),
       body: ListView.builder(
         itemCount: data.length,

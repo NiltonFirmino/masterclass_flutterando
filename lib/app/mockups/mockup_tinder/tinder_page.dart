@@ -84,7 +84,7 @@ class TinderPage extends StatelessWidget {
                   const SizedBox(width: 5),
                   Text(
                     'tinder',
-                    style: Theme.of(context).textTheme.headline1,
+                    style: Theme.of(context).textTheme.headline2,
                   ),
                 ],
               ),

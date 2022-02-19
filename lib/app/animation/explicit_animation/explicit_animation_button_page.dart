@@ -30,7 +30,7 @@ class _ExplicitAnimationButtonPageState
         AlignmentTween(begin: Alignment.bottomRight, end: Alignment.topCenter)
             .animate(_controller);
     borderRadiusAnimation = BorderRadiusTween(
-            begin: BorderRadius.circular(50), end: BorderRadius.circular(0))
+            begin: BorderRadius.circular(25), end: BorderRadius.circular(0))
         .animate(_controller);
   }
 
@@ -43,8 +43,9 @@ class _ExplicitAnimationButtonPageState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Desafio do Botão Flutuante'),
+        title: const Text('Botão Flutuante Controlada'),
       ),
       body: GestureDetector(
         onTap: () {

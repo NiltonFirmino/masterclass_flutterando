@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'app/animation/animations_page.dart';
 import 'app/animation/explicit_animation/explicit_animation_button_page.dart';
 import 'app/animation/explicit_animation/explicit_expasion_lile_page.dart';
 import 'app/animation/implicit_animation/implicit_animation_button_page.dart';
 import 'app/animation/implicit_animation/implicit_expasion_lile_page.dart';
 import 'app/app.dart';
-
-import 'app/home/home_page.dart';
 import 'app/mockups/mockup_getyoumonet/getyoumonet_page.dart';
 import 'app/mockups/mockup_tinder/tinder_page.dart';
-import 'app/repositories/repositories_page.dart';
+import 'app/mockups/mockups_page.dart';
 import 'app/splash/splash_page.dart';
 import 'core/theme/theme_data.dart';
 
@@ -26,17 +25,18 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Masterclass Fluterando',
       theme: darkTheme,
-      initialRoute: '/app',
+      initialRoute: '/splash',
       routes: {
         '/splash': (context) => const SplashPage(),
-        '/': (context) => const HomePage(),
-        '/mockuptinder': (context) => const TinderPage(),
-        '/mockupmoney': (context) => const MoneyScreenPage(),
-        '/implicitlile': (context) => const ImplicitExpasionLilePage(),
-        '/implicitbutton': (context) => const ImplicitAnimationButtonPage(),
-        '/explicitlile': (context) => const ExplicitExpasionLilePage(),
-        '/explicitbutton': (context) => const ExplicitAnimationButtonPage(),
-        '/app': (context) => const AppPage(),
+        '/': (context) => const AppPage(),
+        '/mockup0': (context) => const TinderPage(),
+        '/mockup1': (context) => const MoneyScreenPage(),
+        '/animation1': (context) => const ImplicitExpasionLilePage(),
+        '/animation0': (context) => const ImplicitAnimationButtonPage(),
+        '/animation3': (context) => const ExplicitExpasionLilePage(),
+        '/animation2': (context) => const ExplicitAnimationButtonPage(),
+        '/animations': (context) => const AnimationsPage(),
+        '/mockups': (context) => const MockupsPage(),
       },
     );
   }

@@ -10,14 +10,15 @@ class ImplicitAnimationButtonPage extends StatefulWidget {
 
 class _ImplicitAnimationButtonPageState
     extends State<ImplicitAnimationButtonPage> {
-  var isTap = false;
+  var isTap = true;
   final duration = 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Botão Flutuante - Animação Implícita'),
+        title: const Text('Botão Flutuante Implícita'),
       ),
       body: GestureDetector(
         onTap: () {
@@ -31,11 +32,11 @@ class _ImplicitAnimationButtonPageState
           child: AnimatedContainer(
             duration: Duration(seconds: duration),
             margin: const EdgeInsets.all(20),
-            width: isTap ? 60 : 200,
-            height: 60,
+            width: isTap ? 50 : 150,
+            height:50,
             decoration: BoxDecoration(
               color: Colors.blue,
-              borderRadius: isTap ? BorderRadius.circular(50) : null,
+              borderRadius: isTap ? BorderRadius.circular(25) : null,
             ),
           ),
         ),
