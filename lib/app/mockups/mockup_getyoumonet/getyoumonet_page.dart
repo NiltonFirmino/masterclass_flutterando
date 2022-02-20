@@ -5,142 +5,190 @@ class MockupMyMoneyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(); 
-    
-    //TODO: Refazer a bagaça toda e bem feita
-    
-    /*MaterialApp(
-      home: const MoneyScreenPage(),
-      debugShowCheckedModeBanner: true,
-      theme: ThemeData(
-        textTheme: TextTheme(
-          headline4: const TextStyle(
-            color: Colors.white,
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-          ),
-          headline5: TextStyle(
-            color: Colors.white.withOpacity(0.5),
-            fontWeight: FontWeight.w600,
-            fontSize: 18,
-          ),
-          headline6: const TextStyle(
-            color: Colors.white,
-            fontSize: 15,
-          ),
-        ),
-      ),
-    );
-  }
-}
+    double size = MediaQuery.of(context).size.width;
+    double sizeLogo = MediaQuery.of(context).size.width * 0.3;
 
-class MoneyScreenPage extends StatelessWidget {
-  const MoneyScreenPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        horizontal: 20,
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Image.asset(
-            'assets/logo2.png',
-            height: 93,
-          ),
-          const SizedBox(height: 35),
+    return Scaffold(
+        body: InkWell(
+      onTap: () {
+        Navigator.pop(context);
+      },
+      child: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40),
-            child: Column(
-              children: [
-                Text(
-                  'Get your Money Under Control',
-                  style: Theme.of(context).textTheme.headline4,
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 25),
-                Text(
-                  'Manage your expenses Seamlessly.',
-                  style: Theme.of(context).textTheme.headline5,
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 90),
-          SizedBox(
-            height: 50,
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text('Sign Up With Email ID'),
-              style: ElevatedButton.styleFrom(
-                primary: const Color(0xFF635ce5),
-                textStyle: const TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w600,
-                ),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(7.5)),
-              ),
-            ),
-          ),
-          const SizedBox(height: 15),
-          SizedBox(
-            height: 50,
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+            padding: const EdgeInsets.only(top: 200.0),
+            child: SizedBox(
+              width: sizeLogo,
+              height: sizeLogo,
+              child: Stack(
                 children: [
-                  Image.asset(
-                    'assets/logo2.png',
-                    height: 20,
+                  Container(
+                    height: sizeLogo * 0.4,
+                    width: sizeLogo * 0.4,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF5e5ce5),
+                      borderRadius:
+                          BorderRadius.all(Radius.circular(sizeLogo * 0.2)),
+                    ),
                   ),
-                  const SizedBox(width: 10),
-                  const Text(
-                    'Sign Up with Google',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
+                  Padding(
+                    padding: EdgeInsets.only(top: sizeLogo * 0.5),
+                    child: Container(
+                      height: sizeLogo * 0.4,
+                      width: sizeLogo * 0.4,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF5e5ce5),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(sizeLogo * 0.4),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: sizeLogo * 0.5),
+                    child: Container(
+                      height: sizeLogo * 0.9,
+                      width: sizeLogo * 0.4,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF5e5ce5),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(sizeLogo * 0.4),
+                          topRight: Radius.circular(sizeLogo * 0.4),
+                        ),
+                      ),
                     ),
                   ),
                 ],
               ),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.white,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(7.5)),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 50.0),
+            child: SizedBox(
+              width: size * 0.8,
+              child: const Text(
+                'Get your Money Under Control',
+                style: TextStyle(
+                  fontSize: 35,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 25),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Already have an account?',
-                  style: Theme.of(context).textTheme.headline6,
+            padding: const EdgeInsets.only(top: 15.0),
+            child: SizedBox(
+              width: size * 0.8,
+              child: const Text(
+                'Manage your expenses Seamlessly.',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 158, 158, 158),
                 ),
-                TextButton(
-                  child: Text(
-                    'Sign In',
-                    style: Theme.of(context).textTheme.headline6!.copyWith(
-                          decoration: TextDecoration.underline,
-                        ),
-                  ),
-                  onPressed: () {},
-                ),
-              ],
+                textAlign: TextAlign.center,
+              ),
             ),
-          )
-        ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 50.0),
+            child: Container(
+              height: 50,
+              width: size * 0.9,
+              decoration: const BoxDecoration(
+                  color: Color(0xFF5e5ce5),
+                  borderRadius: BorderRadius.all(Radius.circular(8))),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: size * 0.8,
+                    child: const Text(
+                      'Sign Up With Email ID',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Container(
+              height: 50,
+              width: size * 0.9,
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.all(Radius.circular(8))),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                      width: 40,
+                      height: 25,
+                      child: Image(
+                        image: Image.asset(
+                                'lib/app/mockups/mockup_getyoumonet/assets/google_logo.png')
+                            .image,
+                      )),
+                  const Center(
+                    child: Text(
+                      'Sign Up with Google',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 70.0),
+            child: SizedBox(
+              width: size * 0.9,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RichText(
+                    text: const TextSpan(
+                      text: "Already have an account? ",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 158, 158, 158),
+                        fontSize: 16,
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: 'Sign In',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 158, 158, 158),
+                            decoration: TextDecoration.underline,
+                            decorationColor: Color.fromARGB(255, 158, 158, 158),
+                            decorationStyle: TextDecorationStyle.wavy,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ]),
       ),
-    );*/
+    ));
   }
 }
