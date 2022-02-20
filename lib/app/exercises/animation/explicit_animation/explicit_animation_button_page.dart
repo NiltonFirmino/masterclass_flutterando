@@ -45,7 +45,7 @@ class _ExplicitAnimationButtonPageState
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Botão Flutuante Controlada'),
+        title: const Text('Botão Flutuante - Controlada'),
       ),
       body: GestureDetector(
         onTap: () {

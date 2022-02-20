@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mockups_masterclass/app/home/home_page.dart';
+import 'package:mockups_masterclass/app/home/home_body_widget.dart';
 
-import '../core/components/appbar_home.dart';
+import '../core/components/appbar_widget.dart';
 import '../core/theme/text_theme.dart';
 
 class AppPage extends StatefulWidget {

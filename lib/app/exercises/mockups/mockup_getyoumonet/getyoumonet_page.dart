@@ -138,7 +138,7 @@ class MockupMyMoneyPage extends StatelessWidget {
                         height: 25,
                         child: Image(
                           image: Image.asset(
-                                  'lib/app/mockups/mockup_getyoumonet/assets/google_logo.png')
+                                  'lib/app/exercises/mockups/mockup_getyoumonet/assets/google_logo.png')
                               .image,
                         ),
                       ),

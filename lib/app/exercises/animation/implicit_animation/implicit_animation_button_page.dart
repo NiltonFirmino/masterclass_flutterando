@@ -18,7 +18,7 @@ class _ImplicitAnimationButtonPageState
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Botão Flutuante Implícita'),
+        title: const Text('Botão Flutuante - Implícita'),
       ),
       body: GestureDetector(
         onTap: () {

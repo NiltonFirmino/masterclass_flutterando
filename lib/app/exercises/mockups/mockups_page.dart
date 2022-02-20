@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mockups_masterclass/core/components/appbar_home.dart';
+import 'package:mockups_masterclass/core/components/appbar_widget.dart';
 
-import '../../core/components/subcard.dart';
+import '../../../core/components/subcard_widget.dart';
+
 class MockupsPage extends StatefulWidget {
   const MockupsPage({Key? key}) : super(key: key);
 
@@ -12,17 +13,23 @@ class MockupsPage extends StatefulWidget {
 class _MockupsPageState extends State<MockupsPage> {
   @override
   Widget build(BuildContext context) {
+    List exercises = [
+      'Mockup Tinder',
+      'Mockup getYouMonet',
+    ];
+
     return Scaffold(
       appBar: myAppBarHome(title: 'Mocups'),
       body: ListView.builder(
-        itemCount: 2,
+        itemCount: exercises.length,
         itemBuilder: (BuildContext context, int index) {
           int indice = index + 1;
           String url = '/mockup' + (index).toString();
           return ListTile(
             title: MySubCard(
-              index: "$indice",
+              index: '$indice',
               url: url,
+              title: exercises[index],
             ),
           );
         },

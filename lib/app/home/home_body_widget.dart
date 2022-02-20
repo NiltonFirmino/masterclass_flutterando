@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mockups_masterclass/core/components/card.dart';
+import 'package:mockups_masterclass/core/components/card_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

@@ -4,11 +4,13 @@ import '../theme/text_theme.dart';
 
 class MySubCard extends StatefulWidget {
   final String index;
+  final String title;
   final String url;
   const MySubCard({
     Key? key,
     required this.index,
     required this.url,
+    required this.title,
   }) : super(key: key);
 
   @override
@@ -48,7 +50,7 @@ class _MySubCardState extends State<MySubCard> {
                     ),
                   )),
               Text(
-                "Exercícios 01",
+                widget.title,
                 style: darktextTheme.headline2,
               ),
             ],
