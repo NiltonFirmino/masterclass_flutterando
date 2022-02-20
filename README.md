@@ -25,8 +25,8 @@ O projeto ainda encontra-se em fase de construção.
 * `Scaffold`;
 * `InheritedWidget`;
 * Animações Implícitas com `AnimatedContainer`, `AnimatedAlign`, `AnimatedBuilder`, etc;
-* Animações com `Hero`;
 * Animações Controladas com `Tween`, `TweenAnimationBuilder`, etc;
+* Animações com `Hero`;
 * Funcionamento do Scroll `ListView`;
 * Sistema de Navegação `Navigator`, `MaterialPageRoute`, etc; 
 * Design Patterns I - Model e View;
