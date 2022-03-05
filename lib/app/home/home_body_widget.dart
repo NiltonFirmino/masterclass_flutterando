@@ -14,6 +14,20 @@ class _HomePageState extends State<HomePage> {
     return ListView(
       children: const [
         MyCard(
+          title: 'Playground - Flutter',
+          content: 'Ambiente destinado a testes e estudos em geral, contendo exemplos de widgets e layouts',
+          image: 'materialtoys',
+          qtoExercises: '1',
+          url: '/playground',
+        ),
+         MyCard(
+          title: 'Design Patterns I',
+          content: 'Aplicação de técnica de Design Patterns, contendo 1 exercícios',
+          image: 'patterns1',
+          qtoExercises: '1',
+          url: '/1patterns',
+        ),
+        MyCard(
           title: 'Animações',
           content: 'Estudos sobre animações implícitas e controlada, contendo 4 exercícios e 2 estudos',
           image: 'awesomerunning',
@@ -27,6 +41,8 @@ class _HomePageState extends State<HomePage> {
           qtoExercises: '2',
           url: '/mockups',
         ),
+         
+        
       ],
     );
   }

@@ -46,12 +46,12 @@ class _MySubCardState extends State<MySubCard> {
                   child: Center(
                     child: Text(
                       widget.index,
-                      style: darktextTheme.headline2,
+                      style: darkTextTheme.headline2,
                     ),
                   )),
               Text(
                 widget.title,
-                style: darktextTheme.headline2,
+                style: darkTextTheme.headline2,
               ),
             ],
           ),

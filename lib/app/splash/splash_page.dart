@@ -15,7 +15,7 @@ class _SplashPageState extends State<SplashPage> {
       body: Center(
         child: Builder(builder: (context) {
           Future.delayed(const Duration(seconds: 4)).then((_) {
-           Navigator.of(context).pushReplacementNamed('/');
+           Navigator.pushReplacementNamed(context, '/');
           });
           return SizedBox(
             height: MediaQuery.of(context).size.height,

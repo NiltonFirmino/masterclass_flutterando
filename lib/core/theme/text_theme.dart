@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-TextTheme darktextTheme = const TextTheme(
+TextTheme darkTextTheme = const TextTheme(
   headline1: TextStyle(
     fontSize: 20,
     color: Color(0xFFEDF4F8),

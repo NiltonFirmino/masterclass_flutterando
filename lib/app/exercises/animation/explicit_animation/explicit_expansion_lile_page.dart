@@ -1,12 +1,12 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-class ExplicitExpasionLilePage extends StatefulWidget {
-  const ExplicitExpasionLilePage({Key? key}) : super(key: key);
+class ExplicitExpansionLilePage extends StatefulWidget {
+  const ExplicitExpansionLilePage({Key? key}) : super(key: key);
 
   @override
-  _ExplicitExpasionLilePageState createState() =>
-      _ExplicitExpasionLilePageState();
+  _ExplicitExpansionLilePageState createState() =>
+      _ExplicitExpansionLilePageState();
 }
 
 class Data {
@@ -27,12 +27,11 @@ class Data {
   });
 }
 
-class _ExplicitExpasionLilePageState extends State<ExplicitExpasionLilePage>
+class _ExplicitExpansionLilePageState extends State<ExplicitExpansionLilePage>
     with TickerProviderStateMixin {
   List<Data> data = [];
   @override
   void initState() {
-  
     super.initState();
 
     data.addAll(

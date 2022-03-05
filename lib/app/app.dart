@@ -62,7 +62,7 @@ class _AppPageState extends State<AppPage> {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: _widgetAppbarOptions.elementAt(_selectedAppbar),
-        body:  _widgetBodyOptions.elementAt(_selectedBody),
+        body: _widgetBodyOptions.elementAt(_selectedBody),
         bottomNavigationBar: BottomAppBar(
           child: Container(
             height: 124,
@@ -98,7 +98,7 @@ class _AppPageState extends State<AppPage> {
                             ),
                             Text(
                               "Atividades",
-                              style: darktextTheme.headline3,
+                              style: darkTextTheme.headline3,
                             )
                           ],
                         ),
@@ -124,14 +124,14 @@ class _AppPageState extends State<AppPage> {
                                       'assets/icon/awesomegithub.svg'),
                                 ),
                               ),
-                              tooltip: "Repositorie",
+                              tooltip: "Repositories",
                               onPressed: () {
                                 onItemTapped(1);
                               },
                             ),
                             Text(
                               "Repositórios",
-                              style: darktextTheme.headline3,
+                              style: darkTextTheme.headline3,
                             )
                           ],
                         ),
@@ -161,7 +161,7 @@ class _AppPageState extends State<AppPage> {
                             ),
                             Text(
                               "Sobre o dev",
-                              style: darktextTheme.headline3,
+                              style: darkTextTheme.headline3,
                             )
                           ],
                         ),
@@ -172,10 +172,6 @@ class _AppPageState extends State<AppPage> {
               ),
             ),
           ),
-        )
-
-       
-
-        );
+        ));
   }
 }

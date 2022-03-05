@@ -11,13 +11,13 @@ AppBar myAppBarHome(
   return AppBar(
     elevation: 0,
     title: SizedBox(
-      width: 150,
+      width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: darktextTheme.headline1),
-          Text(subtitle, style: darktextTheme.headline3),
+          Text(title, style: darkTextTheme.headline1),
+          Text(subtitle, style: darkTextTheme.headline3),
         ],
       ),
     ),

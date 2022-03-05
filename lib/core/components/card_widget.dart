@@ -57,15 +57,14 @@ class _MyCardState extends State<MyCard> {
                           child: SizedBox(
                               width: 30,
                               height: 30,
-                              child:
-                                  SvgPicture.asset('assets/icon/$img.svg')),
+                              child: SvgPicture.asset('assets/icon/$img.svg')),
                         )),
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.only(left: 12.0),
                         child: Text(
                           widget.title,
-                          style: darktextTheme.headline5,
+                          style: darkTextTheme.headline5,
                         ),
                       ),
                     ),
@@ -76,14 +75,14 @@ class _MyCardState extends State<MyCard> {
                           Center(
                               child: Text(
                             'Exercícios',
-                            style: darktextTheme.headline4,
+                            style: darkTextTheme.headline4,
                           )),
                           Padding(
                             padding: const EdgeInsets.only(left: 5.0, right: 2),
                             child: Center(
                                 child: Text(
                               widget.qtoExercises,
-                              style: darktextTheme.headline3,
+                              style: darkTextTheme.headline3,
                             )),
                           ),
                         ],
@@ -100,7 +99,7 @@ class _MyCardState extends State<MyCard> {
                       width: MediaQuery.of(context).size.width,
                       child: Text(
                         widget.content,
-                        style: darktextTheme.headline4,
+                        style: darkTextTheme.headline4,
                         textAlign: TextAlign.left,
                       ),
                     ),
@@ -108,7 +107,7 @@ class _MyCardState extends State<MyCard> {
                 ),
               ),
               InkWell(
-                onTap:(){
+                onTap: () {
                   Navigator.pushNamed(context, widget.url);
                 },
                 child: SizedBox(
@@ -128,7 +127,7 @@ class _MyCardState extends State<MyCard> {
                         padding: const EdgeInsets.only(left: 8.0),
                         child: Text(
                           'Acessar código fonte',
-                          style: darktextTheme.headline3,
+                          style: darkTextTheme.headline3,
                         ),
                       ),
                       const Expanded(
@@ -143,7 +142,7 @@ class _MyCardState extends State<MyCard> {
                         child: Center(
                           child: Text(
                             'Ver mais',
-                            style: darktextTheme.headline3,
+                            style: darkTextTheme.headline3,
                           ),
                         ),
                       )

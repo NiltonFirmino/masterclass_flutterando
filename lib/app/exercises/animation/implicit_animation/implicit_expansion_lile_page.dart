@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ImplicitExpasionLilePage extends StatefulWidget {
-  const ImplicitExpasionLilePage({Key? key}) : super(key: key);
+class ImplicitExpansionLilePage extends StatefulWidget {
+  const ImplicitExpansionLilePage({Key? key}) : super(key: key);
 
   @override
-  _ImplicitExpasionLilePageState createState() =>
-      _ImplicitExpasionLilePageState();
+  _ImplicitExpansionLilePageState createState() =>
+      _ImplicitExpansionLilePageState();
 }
 
 class Data {
@@ -14,23 +14,25 @@ class Data {
   final String content;
   bool isTap;
 
-  Data(
-      {required this.title,
-      required this.logo,
-      required this.content,
-      required this.isTap});
+  Data({
+    required this.title,
+    required this.logo,
+    required this.content,
+    required this.isTap,
+  });
 }
 
-class _ImplicitExpasionLilePageState extends State<ImplicitExpasionLilePage> {
+class _ImplicitExpansionLilePageState extends State<ImplicitExpansionLilePage> {
   final List<Data> data = List.generate(
-      50,
-      (index) => Data(
-            title: 'My expansion tile $index',
-            logo: const FlutterLogo(size: 40),
-            content:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel condimentum eros. Sed non ligula rhoncus, eleifend ante non, congue urna. Sed sed nisi vitae mi ullamcorper interdum. Pellentesque scelerisque ornare justo ac dictum. Fusce molestie erat id rhoncus consectetur. Nullam eu fermentum odio. Aliquam tristique gravida diam, at congue turpis. Etiam eleifend fermentum dictum. Sed ultrices, ipsum id fermentum cursus, leo eros im',
-            isTap: false,
-          ));
+    50,
+    (index) => Data(
+      title: 'My expansion tile $index',
+      logo: const FlutterLogo(size: 40),
+      content:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel condimentum eros. Sed non ligula rhoncus, eleifend ante non, congue urna. Sed sed nisi vitae mi ullamcorper interdum. Pellentesque scelerisque ornare justo ac dictum. Fusce molestie erat id rhoncus consectetur. Nullam eu fermentum odio. Aliquam tristique gravida diam, at congue turpis. Etiam eleifend fermentum dictum. Sed ultrices, ipsum id fermentum cursus, leo eros im',
+      isTap: false,
+    ),
+  );
 
   final duration = 200;
 
