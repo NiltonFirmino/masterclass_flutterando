@@ -20,4 +20,11 @@ class RandomCpfGeneratorController extends ChangeNotifier {
     this.cpf = cpf.cpf;
     notifyListeners();
   }
+   validateCpf(String code) {
+   var cpf= Cpf();
+   bool results = cpf.validateCpf(code);
+    
+    notifyListeners();
+    return results;
+  }
 }

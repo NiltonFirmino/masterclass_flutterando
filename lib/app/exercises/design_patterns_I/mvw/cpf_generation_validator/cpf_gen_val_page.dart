@@ -13,7 +13,7 @@ class CpfGeneratorValidatorPage extends StatefulWidget {
 class _CpfGeneratorValidatorPageState extends State<CpfGeneratorValidatorPage> {
   final RandomCpfGeneratorController controller =
       RandomCpfGeneratorController();
-  final TextEditingController? _cpfController = TextEditingController();
+  TextEditingController? _cpfController = TextEditingController();
 
   @override
   void initState() {
@@ -23,6 +23,7 @@ class _CpfGeneratorValidatorPageState extends State<CpfGeneratorValidatorPage> {
     });
   }
 
+  bool? results;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +33,7 @@ class _CpfGeneratorValidatorPageState extends State<CpfGeneratorValidatorPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(25.0),
+              padding: const EdgeInsets.only(right: 40, left: 40, bottom: 20),
               child: TextFormField(
                 controller: _cpfController,
                 decoration: InputDecoration(
@@ -43,13 +44,6 @@ class _CpfGeneratorValidatorPageState extends State<CpfGeneratorValidatorPage> {
                       ),
                       borderRadius: BorderRadius.circular(10.0)),
                   enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(
-                        width: 2,
-                        color: Colors.blue,
-                      ),
-                      borderRadius: BorderRadius.circular(10.0)),
-
-                  disabledBorder: OutlineInputBorder(
                       borderSide: const BorderSide(
                         width: 2,
                         color: Colors.white,
@@ -65,23 +59,51 @@ class _CpfGeneratorValidatorPageState extends State<CpfGeneratorValidatorPage> {
                   labelStyle: const TextStyle(
                     color: Colors.white,
                   ),
+                  counterText: results == null
+                      ? ''
+                      : ((results == true) ? 'CPF é Válido' : 'CPF é Inválido'),
+                  counterStyle: TextStyle(
+                    color: results == null
+                        ? Colors.white
+                        : ((results == true) ? Colors.green : Colors.red),
+                  ),
                 ),
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 20,
-                  color: Colors.white,
+                  color: results == null
+                      ? Colors.white
+                      : ((results == true) ? Colors.green : Colors.red),
                 ),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                controller.generateCpf();
-                _cpfController?.value = _cpfController!.value.copyWith(
-                  text: controller.cpf,
-                  selection:
-                      TextSelection.collapsed(offset: controller.cpf.length),
-                );
-              },
-              child: const Text('Gerar CPF'),
+            Padding(
+              padding: const EdgeInsets.only(right: 40, left: 40),
+              child: Row(
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      controller.generateCpf();
+                      _cpfController?.value = _cpfController!.value.copyWith(
+                        text: controller.cpf,
+                        selection: TextSelection.collapsed(
+                            offset: controller.cpf.length),
+                      );
+                    },
+                    child: const Text('Gerar CPF'),
+                  ),
+                  Expanded(
+                    child: Container(),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      bool? results2 =
+                          controller.validateCpf(_cpfController!.value.text);
+                      results = results2;
+                    },
+                    child: const Text('Validar CPF'),
+                  ),
+                ],
+              ),
             ),
           ],
         ),

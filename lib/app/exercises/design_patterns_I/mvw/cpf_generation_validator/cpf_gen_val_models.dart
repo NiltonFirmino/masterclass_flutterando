@@ -9,14 +9,14 @@ class CpfModel {
 class Cpf {
   late final String cpf;
 
-  List<String> _clearTin(String code) {
+  List<String> cleanCpf(String code) {
     var cleanCpf = code.replaceAll('.', '');
     cleanCpf = cleanCpf.replaceAll('-', '');
     var number = cleanCpf.split("");
     return number;
   }
 
-  bool _validateDigit(int count, List generatedCpf) {
+  validateDigit(int count, List generatedCpf) {
     int index = 0;
     int result = 0;
     int digitValidator;
@@ -36,7 +36,7 @@ class Cpf {
     }
   }
 
-  _formatTin(List<String> cleanCpf) {
+  formatCpf(List<String> cleanCpf) {
     String formattedCpf = "";
 
     for (var index = 0; index < cleanCpf.length; index++) {
@@ -51,10 +51,10 @@ class Cpf {
     return formattedCpf;
   }
 
-  validateCpf(String code) {
-    var cleanCpf = _clearTin(code);
-    if (_validateDigit(10, cleanCpf) && _validateDigit(11, cleanCpf)) {
-      cpf = _formatTin(cleanCpf);
+  bool validateCpf(String code) {
+    var cpfAfterClean = cleanCpf(code);
+    if (validateDigit(10, cpfAfterClean) && validateDigit(11, cpfAfterClean)) {
+      cpf = formatCpf(cpfAfterClean);
       return true;
     }
     return false;
