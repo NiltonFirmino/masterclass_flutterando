@@ -13,7 +13,7 @@ class CpfGeneratorValidatorPage extends StatefulWidget {
 class _CpfGeneratorValidatorPageState extends State<CpfGeneratorValidatorPage> {
   final RandomCpfGeneratorController controller =
       RandomCpfGeneratorController();
-  TextEditingController? _cpfController = TextEditingController();
+  final TextEditingController? _cpfController = TextEditingController();
 
   @override
   void initState() {
