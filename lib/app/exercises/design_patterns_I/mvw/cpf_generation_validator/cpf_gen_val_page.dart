@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mockups_masterclass/app/exercises/design_patterns_I/mvw/cpf_generation_validator/cpf_generation_controller_validator.dart';
+import 'package:mockups_masterclass/app/exercises/design_patterns_I/mvw/cpf_generation_validator/cpf_gen_val_viewmodel.dart';
 import 'package:mockups_masterclass/core/components/appbar_widget.dart';
 
 class CpfGeneratorValidatorPage extends StatefulWidget {
@@ -36,6 +36,11 @@ class _CpfGeneratorValidatorPageState extends State<CpfGeneratorValidatorPage> {
               padding: const EdgeInsets.only(right: 40, left: 40, bottom: 20),
               child: TextFormField(
                 controller: _cpfController,
+                onChanged: (value) {setState(() {
+                  results = null;
+                });
+                  
+                },
                 decoration: InputDecoration(
                   focusedBorder: OutlineInputBorder(
                       borderSide: const BorderSide(
@@ -80,27 +85,33 @@ class _CpfGeneratorValidatorPageState extends State<CpfGeneratorValidatorPage> {
               padding: const EdgeInsets.only(right: 40, left: 40),
               child: Row(
                 children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      controller.generateCpf();
-                      _cpfController?.value = _cpfController!.value.copyWith(
-                        text: controller.cpf,
-                        selection: TextSelection.collapsed(
-                            offset: controller.cpf.length),
-                      );
-                    },
-                    child: const Text('Gerar CPF'),
+                  SizedBox(
+                    width:150,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        controller.generateCpf();
+                        _cpfController?.value = _cpfController!.value.copyWith(
+                          text: controller.cpf,
+                          selection: TextSelection.collapsed(
+                              offset: controller.cpf.length),
+                        );
+                      },
+                      child: const Text('Gerar CPF'),
+                    ),
                   ),
                   Expanded(
                     child: Container(),
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      bool? results2 =
-                          controller.validateCpf(_cpfController!.value.text);
-                      results = results2;
-                    },
-                    child: const Text('Validar CPF'),
+                  SizedBox(
+                    width:150,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        bool? results2 =
+                            controller.validateCpf(_cpfController!.value.text);
+                        results = results2;
+                      },
+                      child: const Text('Validar CPF'),
+                    ),
                   ),
                 ],
               ),
