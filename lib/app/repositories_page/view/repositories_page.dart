@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mockups_masterclass/app/repositories/components/repositories_listtile.dart';
-import 'package:mockups_masterclass/app/repositories/models/repositories_model.dart';
-import 'package:mockups_masterclass/app/repositories/store/repositories_store.dart';
+import 'package:mockups_masterclass/app/repositories_page/components/repositories_listtile.dart';
+import 'package:mockups_masterclass/app/repositories_page/models/repositories_model.dart';
+import 'package:mockups_masterclass/app/repositories_page/store/repositories_store.dart';
 
 import '../../../core/theme/text_theme.dart';
 

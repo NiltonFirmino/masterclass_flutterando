@@ -13,7 +13,7 @@ import '../../app/exercises/mockups/mockup_tinder/tinder_page.dart';
 import '../../app/exercises/mockups/mockups_page.dart';
 import '../../app/flutter_playground/bottombar_example/bottombar_page.dart';
 import '../../app/flutter_playground/playground_page.dart';
-import '../../app/splash/splash_page.dart';
+import '../../app/splash_page/splash_page.dart';
 
 var myRoutes = <String, WidgetBuilder>{
   //splash

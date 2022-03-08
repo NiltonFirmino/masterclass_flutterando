@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockups_masterclass/app/repositories/store/repositories_store.dart';
+import 'package:mockups_masterclass/app/repositories_page/store/repositories_store.dart';
 
 void main() {
   test('Testando se não retorna vázio a busca na API', () async {
