@@ -3,7 +3,7 @@ import 'package:mockups_masterclass/app/repositories/components/repositories_lis
 import 'package:mockups_masterclass/app/repositories/modal/repositories_modal.dart';
 import 'package:mockups_masterclass/app/repositories/store/repositories_store.dart';
 
-import '../../core/theme/text_theme.dart';
+import '../../../core/theme/text_theme.dart';
 
 class RepositoriesPage extends StatefulWidget {
   const RepositoriesPage({Key? key}) : super(key: key);
