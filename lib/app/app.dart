@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mockups_masterclass/app/home/home_body_widget.dart';
+import 'package:mockups_masterclass/app/profile/profile_page.dart';
+import 'package:mockups_masterclass/app/repositories/repositories_page.dart';
 
 import '../core/components/appbar_widget.dart';
 import '../core/theme/text_theme.dart';
@@ -39,15 +41,9 @@ class _AppPageState extends State<AppPage> {
 
   static const List<Widget> _widgetBodyOptions = <Widget>[
     HomePage(),
-    Text(
-      '',
-    ),
-    Center(
-      child: Text(
-        'Sobre o dev',
-        style: optionStyle,
-      ),
-    ),
+    RepositoriesPage(),
+    ProfilePage(),
+    
   ];
 
   void onItemTapped(int index) {

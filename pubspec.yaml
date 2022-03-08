@@ -39,6 +39,8 @@ dependencies:
   dio: ^4.0.4
   shared_preferences: ^2.0.13
   connectivity_plus: ^2.2.1
+  url_launcher: ^6.0.9
+  
 
   
 

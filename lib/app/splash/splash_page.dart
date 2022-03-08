@@ -10,8 +10,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
+    return Scaffold(      
       body: Center(
         child: Builder(builder: (context) {
           Future.delayed(const Duration(seconds: 4)).then((_) {
@@ -26,8 +25,7 @@ class _SplashPageState extends State<SplashPage> {
                 children: [Image.asset(
                     'assets/flutterandomasterclasslogo.png',
                     width: MediaQuery.of(context).size.width * 0.6,
-                  ),
-                  
+                  ),                  
                 ],
               ),
             ),
