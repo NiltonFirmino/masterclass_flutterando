@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:mockups_masterclass/app/repositories/modal/repositories_modal.dart';
+import 'package:mockups_masterclass/app/repositories/models/repositories_model.dart';
 
 
 
