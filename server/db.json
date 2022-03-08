@@ -1,0 +1,50 @@
+{
+    "users": [
+        {
+            "id": "0",
+            "name": "Robert",
+            "email": "robert@gmail.com",
+            "password": "123"
+        },
+        {
+            "id": "1",
+            "name": "Carls",
+            "email": "carls@gmail.com",
+            "password": "1234"
+        }
+    ],
+    "products": [
+        {
+            "id": "0",
+            "title": "Flutter 2"
+        },
+        {
+            "id": "1",
+            "title": "React Native"
+        },
+        {
+            "title": "Ionic",
+            "id": "2"
+        },
+        {
+            "id": "db61e830-9ec7-11ec-a140-45306b51f5cd",
+            "title": "post teste"
+        },
+        {
+            "title": "Flutter 2",
+            "id": "84902610-9ec8-11ec-a140-45306b51f5cd"
+        },
+        {
+            "title": "Flutter 2",
+            "id": "8d36cf30-9ec8-11ec-a140-45306b51f5cd"
+        },
+        {
+            "name": "Novo Produto",
+            "id": "0aa826d0-9ec9-11ec-a140-45306b51f5cd"
+        },
+        {
+            "id": "d3e24800-9ec9-11ec-a140-45306b51f5cd",
+            "name": "Novo Produto"
+        }
+    ]
+}
