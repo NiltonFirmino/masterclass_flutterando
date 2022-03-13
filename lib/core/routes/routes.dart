@@ -8,6 +8,8 @@ import '../../app/exercises/animation/implicit_animation/implicit_animation_butt
 import '../../app/exercises/animation/implicit_animation/implicit_expansion_lile_page.dart';
 import '../../app/exercises/design_patterns_I/mvw/cpf_generation_validator/cpf_gen_val_page.dart';
 import '../../app/exercises/design_patterns_I/patterns_1_page.dart';
+import '../../app/exercises/design_patterns_ii/patterns_2_page.dart';
+import '../../app/exercises/design_patterns_ii/views/todo_list_page.dart';
 import '../../app/exercises/mockups/mockup_getyoumonet/getyoumonet_page.dart';
 import '../../app/exercises/mockups/mockup_tinder/tinder_page.dart';
 import '../../app/exercises/mockups/mockups_page.dart';
@@ -41,4 +43,8 @@ var myRoutes = <String, WidgetBuilder>{
   //Design Patterns I
   '/1patterns': (context) => const DesignPatterns1Page(),
   '/1patterns0': (context) => const CpfGeneratorValidatorPage(),
+
+  //Design Patterns II
+  '/2patterns': (context) => const DesignPatterns2Page(),
+  '/2patterns0': (context) => const TodoListPage(),
 };

@@ -1,4 +1,4 @@
-import 'dart:html';
+
 
 import 'package:connectivity_plus/connectivity_plus.dart';
 
@@ -9,6 +9,8 @@ class CheckInternetService {
       return true;
     } else if (connectivityResult == ConnectivityResult.wifi) {
       return true;
+    } else if (connectivityResult ==null){
+      return false;
     }
     else{
       return false;

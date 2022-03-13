@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 
 class TodoListModel {
-  final String id;
+  final dynamic id;
   final String title;
-  final String isChecked;
+  final bool isChecked;
 
   TodoListModel({
     required this.id,

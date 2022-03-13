@@ -22,10 +22,17 @@ class _HomePageState extends State<HomePage> {
         ),
          MyCard(
           title: 'Design Patterns I',
-          content: 'Aplicação de técnica de Design Patterns, contendo 1 exercícios',
+          content: 'Aplicação de técnica de Design Patterns MVW, contendo 1 exercícios',
           image: 'patterns1',
           qtoExercises: '1',
           url: '/1patterns',
+        ),
+         MyCard(
+          title: 'Design Patterns II',
+          content: 'Aplicação de técnica de Design Patterns II, Prototype, Service e Repository contendo 1 exercícios',
+          image: 'patterns2',
+          qtoExercises: '1',
+          url: '/2patterns',
         ),
         MyCard(
           title: 'Animações',

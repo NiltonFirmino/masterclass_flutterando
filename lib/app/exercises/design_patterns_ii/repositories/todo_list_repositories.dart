@@ -9,18 +9,32 @@ class TodoListRepository {
   final checkInternetService = CheckInternetService();
 
   Future<List<TodoListModel>> getAllTodoList() async {
-    
 
-    if (await checkInternetService == true) {
-      final list = await remoteTodoListDataSource.getTodoList();
+
+      
+      /* Remote
+      final list = await remoteTodoListDataSource.getTodoList() as List;
       await localTodoListDataSource.saveTodoList(list);
       final todoList = list.map(TodoListModel.fromJson).toList();
       return todoList;
-    }
-    else{
+      */
+
       final list = await localTodoListDataSource.getTodoList();
       final todoList = list.map(TodoListModel.fromJson).toList();
       return todoList;
-    }
+
+
+    /*if (await checkInternetService.isConnected() == true) {
+      final list = await remoteTodoListDataSource.getTodoList() as List;
+      await localTodoListDataSource.saveTodoList(list);
+      final todoList = list.map(TodoListModel.fromJson).toList();
+      return todoList;
+    } else {
+      final list = await localTodoListDataSource.getTodoList();
+      final todoList = list.map(TodoListModel.fromJson).toList();
+      return todoList;
+    }*/
+
+
   }
 }
