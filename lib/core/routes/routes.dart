@@ -14,6 +14,7 @@ import '../../app/exercises/mockups/mockup_getyoumonet/getyoumonet_page.dart';
 import '../../app/exercises/mockups/mockup_tinder/tinder_page.dart';
 import '../../app/exercises/mockups/mockups_page.dart';
 import '../../app/flutter_playground/bottombar_example/bottombar_page.dart';
+import '../../app/flutter_playground/componentize_gesture_example/componentize_gesture_page.dart';
 import '../../app/flutter_playground/playground_page.dart';
 import '../../app/splash_page/splash_page.dart';
 
@@ -39,6 +40,8 @@ var myRoutes = <String, WidgetBuilder>{
   //Playground
   '/playground': (context) => const PlaygroundPage(),
   '/playground0': (context) => const MyBottomBarExample(),
+  '/playground1': (context) => const ComponentizeGesturePage(),
+  
 
   //Design Patterns I
   '/1patterns': (context) => const DesignPatterns1Page(),

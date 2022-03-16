@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
           title: 'Playground - Flutter',
           content: 'Ambiente destinado a testes e estudos em geral, contendo exemplos de widgets e layouts',
           image: 'materialtoys',
-          qtoExercises: '1',
+          qtoExercises: '2',
           url: '/playground',
         ),
          MyCard(

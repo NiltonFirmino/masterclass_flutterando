@@ -14,7 +14,8 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
   @override
   Widget build(BuildContext context) {
     List exercises = [
-      'Exemplo Simples BottomBAr',      
+      'Exemplo Simples BottomBAr',
+      'Componentizando gestureDetector',
     ];
 
     return Scaffold(

@@ -1,1 +1,21 @@
-{"todolist":[{"id":"c123d6f0-9f34-11ec-871f-97665a07bb90","title":"Novo","isChecked":false},{"title":"Novo","isChecked":true,"id":"e3f59740-a0c4-11ec-9444-551c112828dc"}]}
+{
+    "todolist": [
+        {
+            "id": "c123d6f0-9f34-11ec-871f-97665a07bb90",
+            "title": "Novo",
+            "isChecked": false
+        },
+        {
+            "title": "Novo",
+            "isChecked": true,
+            "id": "e3f59740-a0c4-11ec-9444-551c112828dc"
+        }
+    ],
+    "products": [
+        {
+            "id": "c123d6f0-9f34-11ec-871f-97665a07bb90",
+            "title": "Novo",
+            "isChecked": false
+        }
+    ]
+}
