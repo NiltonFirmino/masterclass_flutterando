@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockups_masterclass/app/repositories_page/store/repositories_store.dart';
 
-void main() {
-  test('Testando se não retorna vázio a busca na API', () async {
+void main() async {
+    test('Testando se não retorna vázio a busca na API', () async {
     final store = RepositoriesStore();
     final result = await store.getAllRepositories();
     expect(result, isNotEmpty);
